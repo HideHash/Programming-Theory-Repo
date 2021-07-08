@@ -20,4 +20,14 @@ public abstract class Shape : MonoBehaviour
         gameObject.GetComponent<Renderer>().material.color = m_color;
     }
 
+    void UpdateScore()
+    {
+        MainSequencer mainSequencer = GameObject.Find("MainSequencer").GetComponent<MainSequencer>();
+        mainSequencer.CheckAnswer(this);
+    }
+
+    private void OnMouseDown()
+    {
+        UpdateScore();
+    }
 }
