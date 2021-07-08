@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class Shape : MonoBehaviour
 {
-    public Color m_color { get; protected set; }
-    public string m_shapeName { get; protected set; }
+    public Color m_color { get; protected set; } // ENCAPSULATION
+    public string m_shapeName { get; protected set; } // ENCAPSULATION
     public abstract void Move();
 
     public void SetRandomColor()

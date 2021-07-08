@@ -62,14 +62,14 @@ public class MainSequencer : MonoBehaviour
         Destroy(leader.gameObject);
     }
 
-    void CreateLeader()
+    void CreateLeader() // ABSTRACTION
     {
         int shapeId = Random.Range(0, prefabs.Length);
         leader = Instantiate(prefabs[shapeId], LeaderSpawnPos, prefabs[shapeId].transform.rotation);
         leader.SetRandomColor();
     }
 
-    void CreateSelectors()
+    void CreateSelectors() // ABSTRACTION
     {
         int[] numbers = new int[] { 0, 1, 2 };
         int[] orderShape = Helper.ShuffleArray(numbers);

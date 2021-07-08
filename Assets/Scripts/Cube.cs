@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube : Shape
+public class Cube : Shape // INHERITANCE
 {
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,7 @@ public class Cube : Shape
         Move();
     }
 
-    public override void Move()
+    public override void Move() // POLYMORPHISM
     {
         transform.Rotate(Vector3.up * 30.0f * Time.deltaTime);
     }

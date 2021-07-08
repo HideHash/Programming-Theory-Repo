@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sphere : Shape
+public class Sphere : Shape // INHERITANCE
 {
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,7 @@ public class Sphere : Shape
         Move();
     }
 
-    public override void Move()
+    public override void Move() // POLYMORPHISM
     {
         transform.Translate(Vector3.up * 0.001f * Mathf.Sin(Time.time));
     }
